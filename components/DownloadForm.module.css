@@ -1,0 +1,88 @@
+.formContainer {
+  margin: 2rem auto;
+  max-width: 700px;
+  width: 100%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.inputGroup {
+  position: relative;
+}
+
+.urlInput {
+  padding: 1.25rem 1.5rem;
+  font-size: 1.125rem;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.optionsGroup {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.radioLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  user-select: none;
+}
+
+.radioLabel input {
+  display: none;
+}
+
+.radioCustom {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid var(--card-border);
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.radioLabel input:checked + .radioCustom {
+  border-color: var(--primary);
+}
+
+.radioLabel input:checked + .radioCustom::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--primary);
+}
+
+.submitBtn {
+  padding: 1.25rem;
+  font-size: 1.125rem;
+  width: 100%;
+  border-radius: 12px;
+}
+
+.loadingWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  display: inline-block;
+}
